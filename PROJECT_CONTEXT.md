@@ -53,19 +53,34 @@ assets/images/
    replace the placeholder div.
 2. **Remaining carousel photos** — 4 of 6 slides still need real photos swapped in for the
    placeholder icons.
-3. Any further hero/photo tuning — object-position and the hero-media aspect-ratio have a
-   known interaction (see note below) worth understanding before adjusting further.
+3. Hero mobile layout was reworked (see gotcha note below, now resolved) but hasn't been
+   visually confirmed on an actual phone yet — check that the pontoon boat/mountains still
+   read well in the mobile `4/5` crop; that ratio was picked without being able to see the
+   rendered result.
 
-## Important technical gotcha, learned the hard way
+## Important technical gotcha, learned the hard way (resolved 2026-07-31)
 `.hero-media`'s aspect-ratio and `.hero-media img`'s `height`/`top`/`object-position` values
 are interdependent. If the container's aspect ratio exactly matches the photo's native aspect
 ratio, there's zero vertical "slack," and increasing `height` above 100% silently starts
 cropping the left/right edges instead of doing anything vertically — `object-position`'s
-vertical value stops having any visible effect in that state. Keep the container noticeably
-wider than the photo's native ratio if you want `object-position`/parallax adjustments to
-keep working. The `maxOffsetPercent` value in `js/parallax.js` must stay within whatever
-vertical slack the CSS buffer (`top`/`height`) actually provides, or the parallax could
-theoretically reveal an edge at scroll extremes.
+vertical value stops having any visible effect in that state. This is exactly what was
+happening: `hero-pontoon-mountains.jpg` is 2400×1800px (exactly 4:3), and `.hero-media` was
+set to `aspect-ratio: 16/12` (also 4:3) — a perfect match, zero slack.
+
+**Fix applied:** widened the desktop container to `aspect-ratio: 16/9`, which restores real
+vertical slack (~16.7%) purely from the ratio mismatch — no `top`/`height` buffer hack needed
+anymore, so that fragile magic-number pairing was removed entirely. `js/parallax.js`'s
+`maxOffsetPercent` was set to 12 (comfortably under the 16.7% available) and the parallax
+effect is now skipped entirely below 700px width. Mobile gets its own, taller `4/5` ratio via
+a `@media (max-width: 700px)` rule (short `16/9` crops on phone-width screens left almost no
+room for the hero text), paired with a smaller `.hero-content` overlap (`-70px` vs desktop's
+`-140px`).
+
+General rule to keep in mind for any future hero-photo swap: keep the container's
+`aspect-ratio` noticeably wider (i.e., a larger width/height ratio) than the photo's actual
+native ratio if you want vertical `object-position`/parallax panning to keep working. If a
+future photo isn't 4:3, recheck this math — the "noticeably wider" margin is what creates
+the pan room, not any specific pixel buffer.
 
 ## Working style Bruce prefers
 - Wants to review and understand changes, not just receive a finished result — appreciates
