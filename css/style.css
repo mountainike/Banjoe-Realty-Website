@@ -91,6 +91,7 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   overflow: hidden;
   padding-bottom: 70px;
 }
+
 .hero-media {
   position: relative;
   width: 100%;
