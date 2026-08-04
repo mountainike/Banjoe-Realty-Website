@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Gallery | The Enchanted Cottage, Lake Lure NC</title>
+<meta name="description" content="Browse all photos of The Enchanted Cottage, a lakefront vacation rental on Lake Lure, NC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="gallery-page-header container">
+  <a href="index.html" class="back-link">← Back to The Enchanted Cottage</a>
+  <p class="eyebrow">Every corner of the cottage</p>
+  <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);">Photo Gallery</h1>
+</section>
+
+<section class="gallery-section container">
+  <div class="photo-full-grid">
+    <!-- Grid items are generated dynamically by js/lightbox.js from assets/images/manifest.json -->
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close gallery">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lightbox-prev" aria-label="Previous photo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-next" aria-label="Next photo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-content">
+    <img class="lightbox-img" src="" alt="">
+    <p class="lightbox-caption"></p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <strong>The Enchanted Cottage</strong>
+    178 Mark Twain Dr., Lake Lure, NC 28746<br>
+    © 2026 The Enchanted Cottage. Managed via Banjoe Realty LLC.
+  </div>
+</footer>
+
+<script src="js/lightbox.js"></script>
+</body>
+</html>
