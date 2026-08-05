@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) return;
 
-  const speed = 0.35;      // how much slower the image moves than the page (0–1)
-  const maxOffsetPercent = 5; // must stay within the CSS top:-5% / height:110% buffer
+  const speed = 1.0;      // how much slower the image moves than the page (0–1)
+  const maxOffsetPercent = 35; // must stay within the CSS top:-5% / height:110% buffer
 
   let ticking = false;
 
