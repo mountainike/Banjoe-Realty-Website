@@ -40,7 +40,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 .container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(24px, 5vw, 48px); }
-s
+
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 600;
