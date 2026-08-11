@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House Manual | The Enchanted Cottage</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Page-specific additions for the House Manual */
+  .manual-header {
+    background: var(--dusk);
+    color: var(--parchment);
+    padding: 56px 0 40px;
+  }
+  .manual-header h1 { color: #fff; }
+  .manual-header .lede { color: rgba(247,241,230,0.8); max-width: 60ch; }
+
+  .manual-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--parchment);
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+  }
+  .manual-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .manual-nav a {
+    display: block;
+    padding: 16px 18px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    border-bottom: 2px solid transparent;
+  }
+  .manual-nav a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+
+  .manual-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 60px; /* so sticky nav doesn't cover the heading when jumped to */
+  }
+  .manual-section:last-of-type { border-bottom: none; }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16/9;
+    background: var(--dusk-soft);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0;
+  }
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: rgba(247,241,230,0.55);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .info-box {
+    background: var(--parchment-raised);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-top: 20px;
+  }
+  .manual-section li { color: var(--ink-soft); }
+
+  .info-box .placeholder-text {
+    color: var(--ink-soft);
+  }
+</style>
+
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+
+</head>
+<body>
+
+<section class="manual-header">
+  <div class="container">
+    <p class="eyebrow" style="color: #E8934A;">The Enchanted Cottage</p>
+    <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);">House Manual</h1>
+    <p class="lede">Everything you need for your stay — WiFi, check-in details, how to take out the pontoon boat, and more.</p>
+    <p style="font-family: var(--font-mono); font-size: 0.85rem; color: rgba(247,241,230,0.85); margin-top: 18px;">178 Mark Twain Dr., Lake Lure, NC 28746</p>
+    <div class="video-embed" style="background: var(--dusk-soft); max-width: 100%;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6501.668371849175!2d-82.22319362354932!3d35.43413734350691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859e270b5e2cd67%3A0x54487701f8f63bc1!2s178%20Mark%20Twain%20Dr%2C%20Lake%20Lure%2C%20NC%2028746!5e0!3m2!1sen!2sus!4v1785963277129!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map to 178 Mark Twain Dr., Lake Lure, NC"></iframe>
+    </div>
+  </div>
+</section>
+
+<nav class="manual-nav">
+  <div class="container">
+    <ul>
+      <li><a href="#getting-there">Getting There</a></li>
+      <li><a href="#checkin">Check-in</a></li>
+      <li><a href="#checkout">Checkout</a></li>
+      <li><a href="#wifi">WiFi</a></li>
+      <li><a href="#kitchen-trash">Kitchen &amp; Trash</a></li>
+      <li><a href="#pontoon">The Pontoon Boat</a></li>
+      <li><a href="#kayaks">Kayaks &amp; Canoe</a></li>
+      <li><a href="#house-rules">House Rules</a></li>
+      <li><a href="#local">Local Recommendations</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="manual-section container" id="getting-there">
+  <p class="eyebrow">Arriving at the cottage</p>
+  <h2>Getting There</h2>
+  <p>Directions, parking instructions, and how to use the funicular down to the house.</p>
+  <div class="video-embed">
+    <iframe src="https://player.vimeo.com/video/299496094?h=87b8c3ccf8" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Riding the funicular down to the cottage"></iframe>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); margin-top: -8px;">What the ride looks like</p>
+
+  <div class="video-embed">
+    <iframe src="https://player.vimeo.com/video/798465478?h=a69fdfae1a" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="How to operate the tram controls, including the emergency stop"></iframe>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); margin-top: -8px;">How to run the controls, including the emergency stop</p>
+  <div class="info-box">
+    <p class="placeholder-text">PLACEHOLDER — parking instructions, funicular operating steps, walking directions from the parking area.</p>
+  </div>
+</section>
+
+<section class="manual-section container" id="checkin">
+  <p class="eyebrow">Checking in</p>
+  <h2>Check in</h2>
+  <div class="info-box">
+    <p class="placeholder-text">Check in is any time after 4:00 PM. Check out is by 11:00 AM. We use a smart lock, and the code will be sent to you directly, but it typically the last 4 digits of the cell phone of the person who booked the house.</p>
+  </div>
+</section>
+
+<section class="manual-section container" id="checkout">
+  <p class="eyebrow">Checking out</p>
+  <h2>Check out</h2>
+  <div class="info-box">
+    <p class="placeholder-text">All good things must come to an end, including a relaxing stay at the lake! We know you have a lot to do before you leave, but we still have a few items we'd like you to take care of.</p>
+    <ul>
+      <li>For the waterfront, please make sure all noodles and life vests are back in the trunk — otherwise they WILL blow away!</li>
+      <li>Clear out the fridge and pantry and take any food with you.</li>
+      <li>Start the dishwasher.</li>
+      <li>One final request, if possible. Could you start a load of towels? They take a long time and can hold up the cleaners. If the cleaners can get out early, we can let the next folks arrive a bit early too.</li>
+      <li>Most important! Drive safely and come back to see us again!</li>
+    </ul>
+  </div>
+</section>
+
+<section class="manual-section container" id="wifi">
+  <p class="eyebrow">Staying connected</p>
+  <h2>WiFi</h2>
+  <div class="info-box">
+    <p class="placeholder-text">WiFi Network: TEC<br>WiFi Password: LakeLure</p>
+  </div>
+</section>
+
+<section class="manual-section container" id="kitchen-trash">
+  <p class="eyebrow">Day to day</p>
+  <h2>Kitchen &amp; Trash</h2>
+  <div class="info-box">
+    <p class="placeholder-text">The kitchen will have hand soap, dish soap, paper towels, and trash bags. 
+      I also want you to know that we have a healthy bear population in the area, and those guys don't 
+      mess around. After battling them for a few years, I had to give up on my wooden trash corral in favor of metal trash cages!
+      Any trash left outside for any amount of time will get ripped open and tossed around. The trash cages 
+      are located at the top of the hill next to the tram shed. Please put bagged trash in the large grey cans. 
+      Trash pickup is on Monday. Please, only put well bagged trash in the cans. If the trash folks can't reach in and grab a bag, they won't take it. 
+      <br><br>
+      Recycling should NOT be put into bags, but instead put into recycling bins. Those bins can then be put into one of the cages next to the parking pad.
+      And sadly, pizza boxes are not recyclable (FYI, La Strada pizza is GOOD!), so those need to go into bags with the rest of the trash. They pick up recycling on Wednesdays.
+      <br><br>
+      One more important note: Please, under no circumstances, should you feed or attract any wildlife around the house.
+      Raccoons and other critters may seem cute, but they are wild animals and can be dangerous and unpredictable.</p>
+  </div>
+</section>
+
+<section class="manual-section container" id="pontoon">
+  <p class="eyebrow">On the water</p>
+  <h2>The Pontoon Boat</h2>
+  <p>How to reserve the boat, what it costs, and how to operate it safely.</p>
+
+  <div class="info-box">
+    <p class="placeholder-text">There is no better way to see the lake than by pontoon boat. 
+      However, before you can take the boat out there are a few hoops to jump through. 
+      First, we ask for $550 in rent for your whole stay. Someone will meet you at the house 
+      to check you out on the boat, have you sign some waivers, and to collect payment. We accept credit cards, and Venmo (and prefer Venmo!). That info will be sent to you directly.
+      There is also a required boating safety course that must be completed before operating the boat. This is simple to compelte
+      and impossible to fail (seriously, impossible). Details about that are provided in the link below. The boat should already have 10 adult 
+      sized life jackets on board, but there are no jackets there for children so grab some from the trunk on the dock if you need them.
+      <br>The boat will be provided full of gas, and we expect it to be filled up before you leave.</p>
+      <a href="https://www.townoflakelure.com/parksreclak/page/lake-lure-boater-safety-course-and-test" target="_blank" rel="noopener noreferrer">Lake Lure Boating Safety Course and Test</a>
+  </div>
+</section>
+
+<section class="manual-section container" id="kayaks">
+  <p class="eyebrow">On the water</p>
+  <h2>Kayaks &amp; Canoe</h2>
+  <div class="info-box">
+    <p class="placeholder-text">There will be two sit-on kayaks and one canoe on the dock. 
+      Lake rules require that ther emust be at least one life jacket per person in each boat. 
+      Only children under the age of 13 are required to wear a life jacket while on the water. 
+      We provide 4 regular adult sized life jackets, 2 youth life jackets (50 lbs to 90 lbs), 
+      and 2 child life jackets (30 lbs to 50 lbs). The life jackets (along with a bunch of pool 
+      noodles) are stored in the trunk on the dock. When you are done playing on the water, we 
+      ask that you make sure to put the life jackets and noodles back in the trunk. The wind can 
+      come whipping down the gorge and WILL blow them off the dock</p>
+  </div>
+</section>
+
+<section class="manual-section container" id="house-rules">
+  <p class="eyebrow">Good to know</p>
+  <h2>House Rules</h2>
+  <ul>
+    <li>Check-in after 4:00 PM</li>
+    <li>Checkout before 11:00 AM</li>
+    <li>No Smoking in the house</li>
+    <li>10 guests maximum</li>
+    <li>No Pets</li>
+    <li>Please please please - dont turn down the AC so you can turn on the fireplace!</li>
+
+  </ul>
+</section>
+
+<section class="manual-section container" id="local">
+  <p class="eyebrow">While you're here</p>
+  <h2>Local Recommendations</h2>
+  <p>There are some really good and fun restaurants all around Lake Lure. Here are some of our favorites.</p>
+
+  <div class="info-box">
+    <p style="color: var(--amber); font-weight: 600; margin-bottom: 0.5em;">A note on boat access</p>
+    <p class="placeholder-text">Rental boats are NOT permitted out on the lake after dark, so for dinner you may want to plan on driving instead.</p>
+  </div>
+
+  <h3 style="margin-top: 2em;">Accessible by boat</h3>
+  <ul>
+    <li>
+      <a href="https://www.appalachiarestaurant.com/" target="_blank" rel="noopener noreferrer"><strong>Appalachia</strong></a> —
+      Fine dining with incredible views, inside a hotel called The Lodge, built in the 1930s as an escape for the North Carolina State Troopers. Reservations strongly recommended.
+    </li>
+    <li>
+      <a href="https://www.lakehouselakelure.com/" target="_blank" rel="noopener noreferrer"><strong>Lake House</strong></a> —
+      An easy-going family place with a big menu and big margaritas.
+    </li>
+    <li>
+      <a href="https://rumblingbald.com/amenities/#section-dining-at-rumbling-bald" target="_blank" rel="noopener noreferrer"><strong>Legends on the Lake</strong></a> —
+      A great restaurant in the Rumbling Bald Resort. If the weather's nice, try to sit on the porch overlooking the lake.
+    </li>
+  </ul>
+
+  <h3 style="margin-top: 1.6em;">Best reached by car</h3>
+  <ul>
+    <li>
+      <a href="http://www.luredmarketandgrill.com/" target="_blank" rel="noopener noreferrer"><strong>Lured Market &amp; Grill</strong></a> —
+      A fun sandwich place with a small store and some beer taps. Often has live music.
+    </li>
+    <li>
+      <a href="https://chimneyrocksmokehouse.com/" target="_blank" rel="noopener noreferrer"><strong>Chimney Rock Smokehouse</strong></a> —
+      Great barbecue and a fun rooftop bar.
+    </li>
+    <li>
+      <a href="http://www.riverwatchgrill.com/" target="_blank" rel="noopener noreferrer"><strong>Riverwatch Bar and Grill</strong></a> —
+      The classic is back! A great place to grab a burger or wings.
+    </li>
+    <li>
+      <a href="http://lastradaatlakelure.com/" target="_blank" rel="noopener noreferrer"><strong>La Strada</strong></a> —
+      A great Italian place, with some truly amazing New York-style pizza.
+    </li>
+    <li>
+      <a href="http://www.greyhawklakelure.com/" target="_blank" rel="noopener noreferrer"><strong>Grey Hawk</strong></a> —
+      Hard to describe — a restaurant in the middle of a park, with lots of outdoor seating, fire pits, and live music most nights, plus a full menu. Check their hours before heading over.
+    </li>
+    <li>
+      <a href="https://the828taproom.com/" target="_blank" rel="noopener noreferrer"><strong>The 828</strong></a> —
+      New, and looks interesting — haven't been yet. If you go, let us know how it is!
+    </li>
+    <li>
+      <a href="http://www.faenectar.com/" target="_blank" rel="noopener noreferrer"><strong>Fae Nectar</strong></a> —
+      A unique meadery with a strong fantasy/renaissance-faire angle — they have a trebuchet out back and host regular D&amp;D games.
+    </li>
+  </ul>
+</section>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <strong>The Enchanted Cottage</strong>
+    178 Mark Twain Dr., Lake Lure, NC 28746<br>
+    Questions during your stay? Contact your host directly.
+  </div>
+</footer>
+
+</body>
+</html>
