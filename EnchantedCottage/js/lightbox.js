@@ -39,6 +39,14 @@ document.addEventListener("DOMContentLoaded", async function () {
       btn.addEventListener("click", () => open(i));
       grid.appendChild(btn);
     });
+
+    // The gallery grid above #book grows once photos are inserted, which shifts
+    // anything below it. If the page loaded with a hash (e.g. a direct link to
+    // #book), re-jump to it now that the layout has settled.
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) target.scrollIntoView();
+    }
   } catch (err) {
     console.error("Could not load photo gallery manifest:", err);
     grid.innerHTML = '<p style="grid-column: 1/-1; color: var(--ink-soft);">Photo gallery is temporarily unavailable.</p>';
